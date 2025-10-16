@@ -21,7 +21,7 @@ eaglefarm/
 │   │   ├── ecsc_tcp.py      # ECSC TCP protocol
 │   │   ├── faust_http.py    # FAUST HTTP protocol
 │   │   └── faust_tcp.py     # FAUST TCP protocol
-│   ├── templates/            # HTML templates (Albanian theme)
+│   ├── templates/            # HTML templates 
 │   ├── app.py               # Main Flask application
 │   ├── config.py            # ⚠️ EDIT THIS FOR YOUR CTF!
 │   ├── database.py          # SQLite database
