@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  eaglefarm:
+    build: .
+    container_name: eaglefarm_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./server/config.py:/app/server/config.py:ro
+    restart: unless-stopped
+    networks:
+      - eaglefarm_network
+
+networks:
+  eaglefarm_network:
+    driver: bridge

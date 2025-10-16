@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EagleFarm{% endblock %} - Team Albania 🇦🇱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        /* Albanian Theme Colors */
+        :root {
+            --red: #E41E20;
+            --black: #000000;
+            --white: #ffffff;
+            --green: #00ff00;
+        }
+
+        /* Header */
+        header {
+            background: var(--red);
+            padding: 20px;
+            border-bottom: 3px solid var(--white);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1a1a1a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 2px solid var(--red);
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--red);
+        }
+
+        /* Main Content */
+        main {
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid var(--red);
+            margin-top: 50px;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>🦅 EAGLEFARM - Team Albania 🇦🇱</h1>
+    </header>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/flags">Flags</a>
+        <a href="/exploits">Exploits</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>🇦🇱 Team Albania | Attack/Defense CTF Platform</p>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

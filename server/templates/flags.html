@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Flags{% endblock %}
+
+{% block extra_css %}
+<style>
+    .filters {
+        background: #1a1a1a;
+        border: 2px solid var(--red);
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }
+
+    .filters select, .filters button {
+        background: #000;
+        color: var(--white);
+        border: 1px solid var(--red);
+        padding: 10px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .filters button:hover {
+        background: var(--red);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #1a1a1a;
+    }
+
+    th {
+        background: var(--red);
+        color: var(--white);
+        padding: 15px;
+        text-align: left;
+    }
+
+    td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #333;
+    }
+
+    tr:hover {
+        background: #2a2a2a;
+    }
+
+    .status-ACCEPTED {
+        color: var(--green);
+        font-weight: bold;
+    }
+
+    .status-REJECTED {
+        color: #ff6b6b;
+        font-weight: bold;
+    }
+
+    .status-QUEUED {
+        color: #ffaa00;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h2 style="color: var(--red); margin-bottom: 30px;">🚩 FLAGS</h2>
+
+<div class="filters">
+    <form method="GET">
+        <select name="status">
+            <option value="">All Status</option>
+            <option value="QUEUED">Queued</option>
+            <option value="ACCEPTED">Accepted</option>
+            <option value="REJECTED">Rejected</option>
+        </select>
+        
+        <button type="submit">Filter</button>
+        <a href="/flags"><button type="button">Clear</button></a>
+    </form>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Flag</th>
+            <th>Exploit</th>
+            <th>Team</th>
+            <th>Status</th>
+            <th>Response</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for flag in flags %}
+        <tr>
+            <td><code>{{ flag.flag[:20] }}...</code></td>
+            <td>{{ flag.sploit }}</td>
+            <td>{{ flag.team }}</td>
+            <td class="status-{{ flag.status }}">{{ flag.status }}</td>
+            <td>{{ flag.checksystem_response[:30] if flag.checksystem_response else '-' }}</td>
+            <td>{{ flag.time | int }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="6" style="text-align: center; color: #999;">No flags yet</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    // Auto-refresh every 10 seconds
+    setTimeout(function() {
+        location.reload();
+    }, 10000);
+</script>
+{% endblock %}
