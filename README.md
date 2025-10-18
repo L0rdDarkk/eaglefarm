@@ -154,7 +154,6 @@ Access at `http://SERVER_IP:5000`
 - **Exploits** (`/exploits`) - Statistics per exploit (success rate)
 
 **Features:**
-- 🇦🇱 Albanian red/black theme
 - 🔄 Auto-refresh every 5-10 seconds
 - 📈 Real-time statistics
 - ✅ Flag status (Queued/Accepted/Rejected)
