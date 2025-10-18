@@ -1,50 +1,42 @@
 #!/usr/bin/env python3
 """
-🦅 EagleFarm - FAUST CTF HTTP Protocol
+🦅 EagleFarm - ECSC TCP Protocol
+(In case ECSC uses TCP instead of HTTP)
 """
 
-import requests
+import socket
 from server.protocols.base import BaseProtocol
 from server import config
 
 
-class FAUSTHTTPProtocol(BaseProtocol):
-    """FAUST CTF HTTP flag submission protocol"""
+class ECSCTCPProtocol(BaseProtocol):
+    """ECSC TCP flag submission protocol"""
     
     def submit_flag(self, flag, team):
-        """Submit flag via HTTP to FAUST checksystem"""
+        """Submit flag via TCP socket"""
         try:
-            # FAUST uses POST with team token in header
-            headers = {
-                'X-Team-Token': config.TEAM_TOKEN
-            }
+            # Connect to checksystem
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.settimeout(10)
+            sock.connect((config.SYSTEM_HOST, config.SYSTEM_PORT))
             
-            # Send flags as array
-            response = requests.post(
-                config.SYSTEM_URL,
-                json=[flag],
-                headers=headers,
-                timeout=10
-            )
+            # Send team token if required
+            if config.TEAM_TOKEN:
+                sock.sendall(f"{config.TEAM_TOKEN}\n".encode())
+            
+            # Send flag
+            sock.sendall(f"{flag}\n".encode())
+            
+            # Receive response
+            response = sock.recv(1024).decode().strip()
+            sock.close()
             
             # Parse response
-            accepted = response.status_code in [200, 201]
-            
-            # Get response details
-            try:
-                result = response.json()
-                # FAUST returns status per flag
-                if isinstance(result, list) and len(result) > 0:
-                    flag_result = result[0]
-                    response_text = flag_result.get('msg', str(flag_result))
-                else:
-                    response_text = str(result)
-            except:
-                response_text = response.text[:100]
+            accepted = 'accepted' in response.lower() or 'ok' in response.lower()
             
             return {
                 'accepted': accepted,
-                'response': response_text
+                'response': response
             }
         
         except Exception as e:
