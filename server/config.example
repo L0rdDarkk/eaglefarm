@@ -1,0 +1,315 @@
+#!/usr/bin/env python3
+"""
+🦅 EagleFarm Configuration
+Team S1mple - saarCTF 2025 Settings
+
+EDIT THIS FILE before the competition starts!
+"""
+
+# ============================================================================
+# TEAM CONFIGURATION
+# ============================================================================
+
+TEAM_NAME = "S1mple 🇦🇱"
+
+# All teams from saarCTF 2025 - Updated from attack.json
+TEAMS = {
+    'NOP': '10.32.1.2',
+    'teamwang': '10.32.2.2',
+    'M.I.S.T.': '10.32.3.2',
+    'milworms': '10.32.4.2',
+    'valgrind': '10.32.5.2',
+    'WE_0WN_Y0U': '10.32.6.2',
+    'HgbSec': '10.32.7.2',
+    'Hello world': '10.32.8.2',
+    'SKSD': '10.32.9.2',
+    'frontshots': '10.32.10.2',
+    'VSL_0utl4w': '10.32.11.2',
+    'Squareroots': '10.32.12.2',
+    'IngrifHackTeam': '10.32.13.2',
+    'hapu.core': '10.32.14.2',
+    'Bitwalkers': '10.32.15.2',
+    'team Hk': '10.32.16.2',
+    'Legion': '10.32.17.2',
+    'TS0d': '10.32.18.2',
+    'Zer0 Day Zombies': '10.32.19.2',
+    'AlB': '10.32.20.2',
+    'pwnlentoni': '10.32.21.2',
+    'RIFER GPT': '10.32.22.2',
+    'T3amW1pe': '10.32.23.2',
+    'DragonShell': '10.32.24.2',
+    '$pyD3N': '10.32.25.2',
+    'Nexus': '10.32.26.2',
+    'FPTU': '10.32.27.2',
+    '13 17 5': '10.32.28.2',
+    'Utopians': '10.32.29.2',
+    'Offensive Security Team - FPT Smart Cloud': '10.32.30.2',
+    'FluxFingers': '10.32.31.2',
+    'puppies': '10.32.32.2',
+    'CaveiraGamingHD': '10.32.33.2',
+    'Laniakea': '10.32.34.2',
+    'teamsukamudak': '10.32.35.2',
+    'pwnthem0le': '10.32.36.2',
+    'N3m3s1s': '10.32.37.2',
+    'The Flat Network Society': '10.32.38.2',
+    'xnb01': '10.32.39.2',
+    'SharkFlac': '10.32.40.2',
+    'AreDaYush?': '10.32.41.2',
+    'NCA@Nepal': '10.32.42.2',
+    'Cryptonite': '10.32.43.2',
+    'CyberWolf': '10.32.44.2',
+    'Ganesh': '10.32.45.2',
+    'Antimon CTF Team': '10.32.46.2',
+    'S3NDW4R3Z': '10.32.47.2',
+    'defragmented.brains': '10.32.48.2',
+    '10086': '10.32.49.2',
+    'Cyber_Operations': '10.32.50.2',
+    'nepalfuture': '10.32.51.2',
+    'Wanna.W1n': '10.32.52.2',
+    'SemogaYes': '10.32.53.2',
+    'Runner': '10.32.54.2',
+    'Kheshig': '10.32.55.2',
+    'v4gabond': '10.32.56.2',
+    'Noah': '10.32.57.2',
+    'dcua': '10.32.58.2',
+    'CyberPunkertes': '10.32.59.2',
+    'DWY_YK': '10.32.60.2',
+    '404 Brain Not Found': '10.32.61.2',
+    'OneManParty': '10.32.62.2',
+    'J1sttry': '10.32.63.2',
+    '入机队': '10.32.64.2',
+    'CzechCyberTeam': '10.32.65.2',
+    'Breach Boys': '10.32.66.2',
+    'mawjngvux': '10.32.67.2',
+    'CrOwOatia': '10.32.68.2',
+    'Reinon_team': '10.32.69.2',
+    'InfosecPTIT': '10.32.70.2',
+    'ROPgods': '10.32.71.2',
+    'Howling Pandas': '10.32.72.2',
+    'Status 418': '10.32.73.2',
+    'H0iD0N9HU0WN9': '10.32.74.2',
+    'YQTX': '10.32.75.2',
+    'Wr0ngWay Gang': '10.32.76.2',
+    'Xyl0n': '10.32.77.2',
+    '#1': '10.32.78.2',
+    # 'S1mple': '10.32.79.2',  # YOUR TEAM - Don't attack yourself!
+    'Unl0ck_T7em': '10.32.80.2',
+    'UK Lawnmowing Team': '10.32.81.2',
+    'Caliphal Hounds': '10.32.82.2',
+    'Sentra': '10.32.83.2',
+    'DONBASS LEGEND': '10.32.84.2',
+    'H1dd3nC0d3': '10.32.85.2',
+    'Team JK': '10.32.86.2',
+    'Team ACD': '10.32.87.2',
+    'DUCKERZ': '10.32.88.2',
+    'UVT-CTF': '10.32.89.2',
+    'C1ph3rM4n14c': '10.32.90.2',
+    'https://ctf.saarland/signup_player/ef75c57d5269f32900f9': '10.32.91.2',
+    'rvr': '10.32.92.2',
+    '"maybe yes beginners(?)"': '10.32.93.2',
+    'AMF': '10.32.94.2',
+    'EVIL GANG': '10.32.95.2',
+    'Red Cell Reapers': '10.32.96.2',
+    'mmc': '10.32.97.2',
+    'PLAY FOR FUN': '10.32.98.2',
+    'Teneeduu': '10.32.99.2',
+    'G5air3ec': '10.32.100.2',
+    'ChapBaiSlayer': '10.32.101.2',
+    'tcq and szw': '10.32.102.2',
+    'Pwnzer0tt1': '10.32.103.2',
+    'SiBears': '10.32.104.2',
+    'CXG': '10.32.105.2',
+    'PsychoTherapist': '10.32.106.2',
+    '0bscuri7y': '10.32.107.2',
+    'Cincinat': '10.32.108.2',
+    'LTCpp': '10.32.109.2',
+    'NyaarCTF': '10.32.110.2',
+    'HogRiderrr': '10.32.111.2',
+    'DragonSec SI': '10.32.113.2',
+    '脆骨': '10.32.114.2',
+    'OnlyScans': '10.32.115.2',
+    'alpine-standard-3.22.2-x86_64.iso': '10.32.116.2',
+    'Secure-Hive': '10.32.117.2',
+    'HDFR_': '10.32.118.2',
+    'awh4ck3rs': '10.32.119.2',
+    'il4kkiy4': '10.32.120.2',
+    'CyberDucks CIMATEC': '10.32.121.2',
+    'Hexecutioners': '10.32.122.2',
+    'CcZzy': '10.32.123.2',
+    '$0me0neCyber$': '10.32.124.2',
+    'Tas': '10.32.125.2',
+    'CyberRoos': '10.32.126.2',
+    'TraceBash': '10.32.127.2',
+    'SS': '10.32.128.2',
+    'N Ø C T I S': '10.32.129.2',
+    'Maple Bacon': '10.32.130.2',
+    'hnp': '10.32.131.2',
+    'UniverSea': '10.32.132.2',
+    'SPRUSH': '10.32.133.2',
+    'Team Spirit': '10.32.134.2',
+    'Intruders': '10.32.135.2',
+    '1337': '10.32.136.2',
+    'pianka': '10.32.137.2',
+    'qsunii': '10.32.138.2',
+    'Schalena Bdzhilka': '10.32.139.2',
+    'Team2Sicilies': '10.32.140.2',
+    'Pwn-la-Chapelle': '10.32.141.2',
+    'Srdnlen': '10.32.142.2',
+    'jiegec': '10.32.143.2',
+    'BlackBulls': '10.32.144.2',
+    '大大大大哥别杀我': '10.32.145.2',
+    'KB4B3T': '10.32.146.2',
+    'NOTUS': '10.32.147.2',
+    'Dixie_Flatline': '10.32.148.2',
+    'FEDORAMAN PROJECT': '10.32.149.2',
+    'lazy-cats': '10.32.150.2',
+    'k0kos': '10.32.151.2',
+    'KattangalSec': '10.32.152.2',
+    'North Korea': '10.32.153.2',
+    '大不了回山里': '10.32.154.2',
+    'wz666': '10.32.155.2',
+    'VVVEnom': '10.32.156.2',
+    '混个小分队': '10.32.157.2',
+    'V&N': '10.32.158.2',
+    'ByteHunters': '10.32.159.2',
+    '希德尼娃': '10.32.160.2',
+    'Vagabond': '10.32.161.2',
+    'Bushwhackers': '10.32.162.2',
+    'MaaSec': '10.32.163.2',
+    'H4ker0': '10.32.164.2',
+    'single': '10.32.165.2',
+    'ENOFLAG': '10.32.166.2',
+    'cR4.sh': '10.32.167.2',
+    '逐梦': '10.32.168.2',
+    'StackOverClown': '10.32.169.2',
+    'Team Greece': '10.32.170.2',
+    'Entr0py': '10.32.171.2',
+    'deny_deus_ex_machina': '10.32.172.2',
+    'SUITT': '10.32.173.2',
+    'TΞΛM MΛЯKHØЯ': '10.32.174.2',
+    '橘子': '10.32.175.2',
+    'joker': '10.32.176.2',
+    'RedRocket': '10.32.177.2',
+    'dtl': '10.32.178.2',
+    'NoENV': '10.32.179.2',
+    'Perperikon': '10.32.180.2',
+    'idek': '10.32.181.2',
+    'p4n1c_st4t3': '10.32.182.2',
+    'FAUST': '10.32.183.2',
+    'room2042': '10.32.184.2',
+    'MichalPalich': '10.32.185.2',
+    '-1dayxploit': '10.32.186.2',
+    'SIGAN': '10.32.187.2',
+    'Zergs': '10.32.188.2',
+    'PsychoTherapists': '10.32.189.2',
+    'jhw orvw2': '10.32.190.2',
+    'Slovak Cyber Team': '10.32.191.2',
+    'LosFuzzys': '10.32.192.2',
+    'dirthteam': '10.32.193.2',
+    'Zero_heros.1': '10.32.194.2',
+    'IronW0lf': '10.32.195.2',
+    'HexMeAQuestion': '10.32.196.2',
+    'maicai': '10.32.197.2',
+    'sesac1': '10.32.198.2',
+    'z9nn8w': '10.32.199.2',
+    'MTGA': '10.33.0.2',
+    'Quebecois Bacon': '10.33.1.2',
+    'BKISC': '10.33.2.2',
+    'TUTo': '10.33.3.2',
+    'MithrilDawn': '10.33.4.2',
+    'Count1tD0wn': '10.33.5.2',
+    'Cubemastery': '10.33.6.2',
+    'lnw': '10.33.7.2',
+    'mild_thunder': '10.33.8.2',
+    'disc22': '10.33.9.2',
+    'Starfish': '10.33.10.2',
+    '0daySyndicate': '10.33.11.2',
+    'DeathNet': '10.33.12.2',
+    'PwnHub Premium': '10.33.13.2',
+    'Den': '10.33.14.2',
+    'JK': '10.33.15.2',
+    'Latvian Lattice Lovers': '10.33.16.2',
+    'MED_FR3AK5': '10.33.17.2',
+    '0xN0B1T': '10.33.18.2',
+    'pyjama_gang': '10.33.19.2',
+    'Red Cadets': '10.33.20.2',
+    'uu798': '10.33.21.2',
+    'she': '10.33.22.2',
+    'FlagMotori': '10.33.23.2',
+    'moimoimoi': '10.33.24.2',
+    'Niyani': '10.33.25.2',
+    'hackratic': '10.33.26.2',
+    'Tower of Hanoi': '10.33.27.2',
+    'TeamSerbia': '10.33.28.2',
+    'pricatice': '10.33.29.2',
+    'huzzah': '10.33.30.2',
+    'qwerty': '10.33.31.2',
+    'summ7': '10.33.32.2',
+    'afaaa': '10.33.33.2',
+    'CBC Skibidis': '10.33.34.2',
+    'qiling': '10.33.35.2',
+    'aaaaaaaaaaaaaaaaaaa': '10.33.36.2',
+    'qfghhh': '10.33.37.2',
+    'jom11qqq': '10.33.38.2',
+    'LCD': '10.33.39.2',
+    'Predators': '10.33.40.2',
+    'MEPhI CTF': '10.33.41.2',
+    '4alias': '10.33.42.2',
+    'Qu4cks': '10.33.43.2',
+    '4lias': '10.33.44.2',
+    'S™': '10.33.45.2',
+    'ctfrrteam': '10.33.46.2',
+}
+
+# Flag format (regex) - UPDATE THIS when you see actual flags!
+# Common saarCTF formats:
+#   r'SAAR\{[A-Za-z0-9+/=]{32}\}'
+#   r'[A-Z0-9]{31}='
+FLAG_FORMAT = r'SAAR\{[A-Za-z0-9+/=]{32}\}'
+
+
+# ============================================================================
+# CHECKSYSTEM CONFIGURATION (saarCTF)
+# ============================================================================
+
+# saarCTF uses TCP submission
+SYSTEM_PROTOCOL = 'ructf_tcp'
+
+# Checksystem address
+SYSTEM_HOST = 10.32.250.2
+SYSTEM_PORT = 31337
+
+# For HTTP protocols (NOT USED)
+SYSTEM_URL = 'http://submission.ctf.saarland/flags'
+TEAM_TOKEN = 'not_needed'
+
+
+# ============================================================================
+# SUBMISSION SETTINGS
+# ============================================================================
+
+SUBMIT_PERIOD = 5           # Submit every 5 seconds
+SUBMIT_FLAG_LIMIT = 50      # Max flags per submission
+FLAG_LIFETIME = 5 * 60      # 5 minutes flag lifetime
+
+
+# ============================================================================
+# SERVER SETTINGS
+# ============================================================================
+
+SERVER_PASSWORD = 'Eagle2025!'
+DEBUG = False
+DATABASE_PATH = 'data/flags.db'
+
+
+# ============================================================================
+# FUNCTIONS
+# ============================================================================
+
+def get_public_config():
+    """Config safe to send to clients"""
+    return {
+        'TEAMS': TEAMS,
+        'FLAG_FORMAT': FLAG_FORMAT,
+        'TEAM_NAME': TEAM_NAME
+    }
